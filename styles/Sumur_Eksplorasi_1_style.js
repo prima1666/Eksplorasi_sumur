@@ -8,8 +8,8 @@ var style_Sumur_Eksplorasi_1 = function(feature, resolution){
     };
     
     var labelText = ""; 
-    var labelFont = "10px, sans-serif";
-    var labelFill = "#000000";
+    var labelFont = "13.0px \'Open Sans\', sans-serif";
+    var labelFill = "#ffffff";
     var bufferColor = "";
     var bufferWidth = 0;
     var textAlign = "center";
@@ -22,8 +22,8 @@ var style_Sumur_Eksplorasi_1 = function(feature, resolution){
     if (size == 1) { // If cluster has one feature
         var feature = clusteredFeatures[0];
         value = clusteredFeatures[0].get("");
-        if ("" !== null) {
-            labelText = String("");
+        if (feature.get("Point") !== null) {
+            labelText = String(feature.get("Point"));
         }
     } else { // If cluster has more than one feature
 		labelText = size.toString();
